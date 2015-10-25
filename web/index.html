@@ -113,7 +113,7 @@
     offset = request.POST.get("offset")
     order = request.POST.get("order")
     sort = request.POST.get("sort")
-    quotes = Quotes.objects.all()[offset:offset+limit]
+    quotes = Quotes.objects.all()[offset:offset+limit..]
 -->
     <table data-toggle="table"
            data-url="./json/tableData.txt"
@@ -131,7 +131,7 @@
         </tr>
         </thead>
     </table>
-
+<br>
     <h3> there is no real server behind this so the pagination wont show the exact number of elements the data is  being taken from the  .txt file containing  json object so same data keeps repeating  inside the table this can be changed  if server generates the  requied data</h3>
 </div>
 </html>
