@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <meta charset="UTF-8" />
+    <meta charset="UTF-8"/>
 
 
     <link rel="stylesheet"
@@ -26,87 +26,112 @@
             src="http://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.8.1/locale/bootstrap-table-en-US.min.js"></script>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
 </head>
 
 <body>
 <h1 align="center">dummy table</h1>
+
 <div class="col-md-offset-3 col-md-6">
+    <!--<table data-toggle="table"
+           id="table"
+           data-toolbar="#toolbar"
+           data-search="true"
+           data-show-refresh="true"
+           data-show-toggle="true"
+           data-show-columns="true"
+           data-show-export="true"
+           data-detail-view="true"
+           data-detail-formatter="some data here"
+           data-minimum-count-columns="2"
+           data-show-pagination-switch="true"
+           data-pagination="true"
+           data-id-field="id"
+           data-page-list="[1, 3, 5, 10, ALL]"
+           data-show-footer="true">
+
+        <thead>
+
+
+        <tr>
+            <th><strong>Name </strong></th>
+            <th><strong>Channel</strong></th>
+            <th><strong>App-type</strong></th>
+            <th><strong>App use count</strong></th>
+            <th><strong>Status</strong></th>
+            <th><strong>Codes</strong></th>
+            <th><strong>Options</strong></th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td><a href="#"><span style="color: red;" class="glyphicon glyphicon-envelope"></span></a> coupon 1</td>
+            <td>facebook</td>
+            <td><span class="glyphicon glyphicon-link"></span></td>
+            <td>200</td>
+            <td>draft</td>
+            <td><a href="#">30</a></td>
+            <td><a href="#"><span title="edit" style="color: blue;" class="glyphicon glyphicon-edit"></span></a> <a
+                    href="#"> <span title="delete" style="color: blue;" class="glyphicon glyphicon-remove"></span></a>
+                <a href="#"> <span title="Publish" style="color: blue;" class="glyphicon glyphicon-floppy-saved"></span></a>
+            </td>
+        </tr>
+        <tr>
+            <td><a href="#"><span style="color: red;" class="glyphicon glyphicon-envelope"></span></a> coupon 2</td>
+            <td>facebook</td>
+            <td><span class="glyphicon glyphicon-link"></span></td>
+            <td>200</td>
+            <td>draft</td>
+            <td><a href="#">30</a></td>
+            <td><a href="#"><span title="edit" style="color: blue;" class="glyphicon glyphicon-edit"></span></a> <a
+                    href="#"> <span title="delete" style="color: blue;" class="glyphicon glyphicon-remove"></span></a>
+                <a href="#"> <span title="Publish" style="color: blue;" class="glyphicon glyphicon-floppy-saved"></span></a>
+            </td>
+        </tr>
+        <tr>
+            <td><a href="#"><span style="color: red;" class="glyphicon glyphicon-envelope"></span></a> coupon 3</td>
+            <td>facebook</td>
+            <td><span class="glyphicon glyphicon-link"></span></td>
+            <td>200</td>
+            <td>draft</td>
+            <td><a href="#">30</a></td>
+            <td><a href="#"><span title="edit" style="color: blue;" class="glyphicon glyphicon-edit"></span></a> <a
+                    href="#"> <span title="delete" style="color: blue;" class="glyphicon glyphicon-remove"></span></a>
+                <a href="#"> <span title="Publish" style="color: blue;" class="glyphicon glyphicon-floppy-saved"></span></a>
+            </td>
+        </tr>
+
+
+        </tbody>
+    </table>-->
+
+<!--                    table sends data in this formatd
+    { limit: number, offset: number, order: "ask/desk", sort: string (sorted field name) }-->
+    <!--
+    server side
+    def quotes(request):
+    limit = request.POST.get("limit")
+    offset = request.POST.get("offset")
+    order = request.POST.get("order")
+    sort = request.POST.get("sort")
+    quotes = Quotes.objects.all()[offset:offset+limit]
+-->
     <table data-toggle="table"
-       id="table"
-       data-toolbar="#toolbar"
-       data-search="true"
-       data-show-refresh="true"
-       data-show-toggle="true"
-       data-show-columns="true"
-       data-show-export="true"
-       data-detail-view="true"
-       data-detail-formatter="some data here"
-       data-minimum-count-columns="2"
-       data-show-pagination-switch="true"
-       data-pagination="true"
-       data-id-field="id"
-       data-page-list="[10, 25, 50, 100, ALL]"
-       data-show-footer="true">
+           data-url="./json/tableData.txt"
+           data-pagination="true"
+           data-side-pagination="server"
+           data-page-list="[1, 5, 10, 100, ALL]"
+           data-search="true"
+           data-height="300">
+        <thead>
+        <tr>
+            <th data-field="state" data-checkbox="true"></th>
+            <th data-field="id" data-align="right" data-sortable="true">Item ID</th>
+            <th data-field="name" data-align="center" data-sortable="true">Item Name</th>
+            <th data-field="price" data-sortable="true">Item Price</th>
+        </tr>
+        </thead>
+    </table>
 
-    <thead>
-
-
-    <tr>
-        <th><strong>Name </strong></th>
-        <th><strong>Channel</strong></th>
-        <th><strong>App-type</strong></th>
-        <th><strong>App use count</strong></th>
-        <th><strong>Status</strong></th>
-        <th><strong>Codes</strong></th>
-        <th><strong>Options</strong></th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr>
-        <td><a href="#"><span  style="color: red;" class="glyphicon glyphicon-envelope"></span></a>  coupon  </td>
-        <td>facebook</td>
-        <td><span class="glyphicon glyphicon-link"></span></td>
-        <td>200</td>
-        <td>draft</td>
-        <td><a href="#">30</a></td>
-        <td ><a href="#"><span title="edit" style="color: blue;" class="glyphicon glyphicon-edit"></span></a> <a href="#"> <span title="delete"  style="color: blue;"  class="glyphicon glyphicon-remove"></span></a> <a href="#"> <span title="Publish"  style="color: blue;"  class="glyphicon glyphicon-floppy-saved"></span></a>
-        </td>
-    </tr>
-    <tr>
-        <td><a href="#"><span  style="color: red;" class="glyphicon glyphicon-envelope"></span></a>  coupon  </td>
-        <td>facebook</td>
-        <td><span class="glyphicon glyphicon-link"></span></td>
-        <td>200</td>
-        <td>draft</td>
-        <td><a href="#">30</a></td>
-        <td ><a href="#"><span title="edit" style="color: blue;" class="glyphicon glyphicon-edit"></span></a> <a href="#"> <span title="delete"  style="color: blue;"  class="glyphicon glyphicon-remove"></span></a> <a href="#"> <span title="Publish"  style="color: blue;"  class="glyphicon glyphicon-floppy-saved"></span></a>
-        </td>
-    </tr>
-    <tr>
-        <td><a href="#"><span  style="color: red;" class="glyphicon glyphicon-envelope"></span></a>  coupon  </td>
-        <td>facebook</td>
-        <td><span class="glyphicon glyphicon-link"></span></td>
-        <td>200</td>
-        <td>draft</td>
-        <td><a href="#">30</a></td>
-        <td ><a href="#"><span title="edit" style="color: blue;" class="glyphicon glyphicon-edit"></span></a> <a href="#"> <span title="delete"  style="color: blue;"  class="glyphicon glyphicon-remove"></span></a> <a href="#"> <span title="Publish"  style="color: blue;"  class="glyphicon glyphicon-floppy-saved"></span></a>
-        </td>
-    </tr>
-
-
-    </tbody>
-</table>
+    <h3> there is no real server behind this so the pagination wont show the exact number of elements the data is  being taken from the  .txt file containing  json object so same data keeps repeating  inside the table this can be changed  if server generates the  requied data</h3>
 </div>
 </html>
