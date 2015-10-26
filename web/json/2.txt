@@ -1,0 +1,23 @@
+{
+    "total": 3,
+    "rows": [
+        {
+            "id": 1,
+            "name": "Coupon",
+            "Channel": "Facebook",
+            "App-type": "1 to 1",
+            "appUseCount": 20,
+            "Status": "draft",
+            "Codes": 5
+        },
+        {
+            "id": 7,
+            "name": "Coupon7",
+            "Channel": "Facebook",
+            "App-type": "1 to 1",
+            "appUseCount": 20,
+            "Status": "draft",
+            "Codes": 5
+        }
+    ]
+}
