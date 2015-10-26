@@ -30,8 +30,7 @@ var searchQuery;
 $(document).ready(function(){
        $("#bytn").click(function(){
         $('#serverTable').bootstrapTable('removeAll');
-        $('#serverTable').bootstrapTable('refresh',{url: './json/2.txt?'+'searchQuery'});
-    });
+        });
 $("#btn").click(function(){
 $('#serverTable').bootstrapTable('refresh',{url: './json/2.txt'});
     });
@@ -39,14 +38,13 @@ $('#serverTable').bootstrapTable('refresh',{url: './json/2.txt'});
  </script>
 </head>
 <body>
-<h1 align="center">dummy table</h1>
+<h1 align="center"><code>dummy table</code></h1>
 
 <div class="col-md-offset-3 col-md-7">
 
         <table id="serverTable"
             data-toggle="table"
            data-url="./json/tableData.txt"
-           data-query-params="foo"
            data-pagination="true"
            data-side-pagination="server"
            data-page-list="[1, 5, 10, 100, ALL]"
@@ -65,7 +63,7 @@ $('#serverTable').bootstrapTable('refresh',{url: './json/2.txt'});
             <th data-field="operate" data-formatter="operateFormatter" data-events="operateEvents">Item Operate</th>
         </tr>
         </thead>
-\    </table>
+   </table>
 
 <br>
     <h3> there is no real server behind this so the pagination wont show the exact number of elements the data is  being taken from the  .txt file containing  json object so same data keeps repeating  inside the table this can be changed  if server generates the  requied data</h3>
